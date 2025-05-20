@@ -15,7 +15,8 @@ Aplikasi manajemen jadwal dokter dengan RESTful API menggunakan Laravel dan Sanc
 
 - PHP >= 8.1
 - Composer
-- MySQL / MariaDB
+- MySQL 
+- Laragon / XAMPP
 - Node.js & NPM (untuk frontend)
 - Git
 
@@ -59,10 +60,19 @@ DB_PASSWORD=
 
 ```bash
 php artisan migrate
-php artisan db:seed
+php artisan db:seed --class=DoctorSeeder
+php artisan db:seed --class=UserSeeder
 ```
 
 ## Cara Menjalankan
+
+### Menjalankan dengan Laragon/XAMPP
+
+Anda dapat menjalankan aplikasi ini menggunakan Laragon atau XAMPP:
+
+1. Letakkan folder project di direktori `www` Laragon atau `htdocs` XAMPP
+2. Nyalakan web server dan MySQL
+3. Buka terminal di direktori project dan jalankan `php artisan serve` untuk menjalankan aplikasi di `http://localhost:8000`
 
 ### Menjalankan Server Pengembangan
 
